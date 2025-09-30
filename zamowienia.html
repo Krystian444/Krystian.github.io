@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang = "pl">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Zamówienia hurtowe</title>
+    <link rel='stylesheet' href='styl4.css'>
+</head>
+
+<body>
+    <div class = "baner">
+        <h1>Sieci komputerowe</h1>
+    </div>
+
+    <div class = "lewy">
+        <h2>Aktualizacja i zamówienia materiałów</h2>
+        <p>Do wewnętrznego użytku firmy</p>
+        <img src = "obraz.jpg">
+    </div>
+
+    <div class = "prawy">
+        <table>
+            <tr>
+                <th>Produkt</th>
+                <th >Jednostka</th>
+                <th id="ilosc">Dostępna ilość</th>
+                <th>Aktualizacja</th>
+                <th>Zamówienie</th>
+            </tr>
+            <tr>
+                <td>Skrętka U/UTP drut</td>
+                <td>metr</td>
+                <td id="ilosc1">1</td>
+                <td><input type="button" value = "Aktualizuj"></td>
+                <td><input type="button" value = "Zamów"></td>
+            </tr>
+            <tr>
+                <td>Skrętka U/UTP linka</td>
+                <td>metr</td>
+                <td id="ilosc2">2</td>
+                <td><input type="button"  value = "Aktualizuj" onclick="aktualizuj()"/>  </td>
+                <td><input type="button" value = "Zamów" onclick="zamow()"/></td>
+            </tr>
+            <tr>
+                <td>Wtyki 8P8C</td>
+                <td>sztuki</td>
+                <td id="ilosc3">10</td>
+                <td><input type="button" value = "Aktualizuj"></td>
+                <td><input type="button" value = "Zamów"></td>
+            </tr>
+            <tr>
+                <td>Moduły Keystone</td>
+                <td>sztuki</td>
+                <td class="ilosc4">30</td>
+                <td><input type="button" value = "Aktualizuj"></td>
+                <td><input type="button" value = "Zamów"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class = "clear"></div>
+
+    <div class = "stopka">
+        <a href = "http://sieci.pl/">Nasza strona internetowa</a>
+        <p>Stronę przygotował: Krystian Król</p>
+    </div>
+
+
+    <script>
+        let ziomek1 = document.getElementById("ilosc")
+let ziomek2 = document.getElementById("ilosc1")
+let ziomek3 = document.getElementById("ilosc2")
+let ziomek4 = document.getElementById("ilosc3")
+
+function kolory(){
+    if (ziomek1.innerText == "0"){
+        ziomek1.style = "background-color:red;"
+    }
+    else if (ziomek1.innerText >= "1" && ziomek1.innerText <= "5"){
+        ziomek1.style = "background-color:yellow;"
+    }
+    else if (ziomek1.innerText >= "6"){
+        ziomek1.style = "background-color:honeydew;"
+    } 
+
+    if (ziomek2.innerText == "0"){
+        ziomek2.style = "background-color:red;"
+    }
+    else if (ziomek2.innerText >= "1" && ziomek2.innerText <= "5"){
+        ziomek2.style = "background-color:yellow;"
+    }
+    else if (ziomek2.innerText >= "6"){
+        ziomek2.style = "background-color:honeydew;"
+    } 
+
+    if (ziomek3.innerText == "0"){
+        ziomek3.style = "background-color:red;"
+    }
+    else if (ziomek3.innerText >= "1" && ziomek3.innerText <= "5"){
+        ziomek3.style = "background-color:yellow;"
+    }
+    else if (ziomek3.innerText >= "6"){
+        ziomek3.style = "background-color:honeydew;"
+    } 
+
+    if (ziomek4.innerText == "0"){
+        ziomek4.style = "background-color:red;"
+    }
+    else if (ziomek4.innerText >= "1" && ziomek4.innerText <= "5"){
+        ziomek4.style = "background-color:yellow;"
+    }
+    else if (ziomek4.innerText >= "6"){
+        ziomek4.style = "background-color:honeydew;"
+    } 
+}
+kolory()
+
+function aktualizuj1(){
+    var wartosc1 = prompt("Podaj nową wartość:");
+    ziomek1.innerText = wartosc1
+    kolory()
+}
+
+function aktualizuj2(){
+    var wartosc1 = prompt("Podaj nową wartość:");
+    ziomek2.innerText = wartosc1
+    kolory()
+}
+
+function aktualizuj3(){
+    var wartosc1 = prompt("Podaj nową wartość:");
+    ziomek3.innerText = wartosc1
+    kolory()
+}
+
+function aktualizuj4(){
+    var wartosc1 = prompt("Podaj nową wartość:");
+    ziomek4.innerText = wartosc1
+    kolory()
+}
+
+let zamowienie = 0
+
+function zamow(tekst){
+    zamowienie += 1
+    if (tekst == tekst1){
+        var zamowienieprompt = alert("Zamówienie nr: "+zamowienie+" Produkt: Skrętka U/UTP drut")
+    }
+    else if (tekst == tekst2){
+        var zamowienieprompt = alert("Zamówienie nr: "+zamowienie+" Produkt: Skrętka U/UTP linka")
+    }
+    else if (tekst == tekst3){
+        var zamowienieprompt = alert("Zamówienie nr: "+zamowienie+" Wtyki 8P8C")
+    }
+    else if (tekst == tekst4){
+        var zamowienieprompt = alert("Zamówienie nr: "+zamowienie+" Moduły Keystone")
+    }
+}
+    </script>
+
+
+    
+</body>
+
+</html>
