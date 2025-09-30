@@ -1,0 +1,22 @@
+#kontener{
+    display:flex;
+}
+
+#kontener1{
+    height:600px;
+    width:30%;
+    display:inline-block;
+    background-color:maroon;
+    color:white;
+
+}
+
+#kontener2{
+    height:600px;
+    width:70%;
+    display:inline-block;
+    background-color:maroon;
+    color:white;
+    
+}
+
